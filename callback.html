@@ -1,0 +1,7 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Zone Critique Uploader — connexion</title>
+<style>body{margin:0;background:#06080E;color:#E8E6E1;font-family:system-ui,sans-serif;display:flex;min-height:100vh;align-items:center;justify-content:center}main{max-width:640px;padding:24px;text-align:center}h1{color:#FF2A1A}code{display:block;background:#1C2333;padding:14px;border-radius:8px;word-break:break-all;margin:16px 0}button{background:#FF2A1A;color:#fff;border:0;border-radius:8px;padding:12px 22px;font-size:16px;cursor:pointer}</style></head>
+<body><main><h1>Zone Critique Uploader</h1><p id="msg">Connexion TikTok…</p><code id="code"></code><button id="cp">Copier le code</button>
+<p>Colle ce code dans l'outil : <b>python tools/tiktok_upload.py --code LE_CODE</b></p></main>
+<script>const q=new URLSearchParams(location.search),c=q.get('code'),e=q.get('error');
+document.getElementById('msg').textContent=c?'Autorisation réussie ✔':'Erreur : '+(e||'aucun code')+' '+(q.get('error_description')||'');
+document.getElementById('code').textContent=c||'';document.getElementById('cp').onclick=()=>navigator.clipboard.writeText(c||'');</script></body></html>
